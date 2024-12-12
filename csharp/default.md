@@ -3,19 +3,21 @@
 Dictionary に限らず全般的に言えることだが、 Dictionary で宣言しただけの変数はコンパイルエラーになり、 default で指定した場合は null となり、 new して空の初期値を与えると空の Dictionary が返る
 
 ```cs
-        // ----------
-        // Dictionary
-        // ----------
-        Dictionary<string, int> dict = default;
-        // Rider Warning: Expression is always true
-        Debug.Log($"dict: {dict == null}");
-        Dictionary<string, int> dict2;
-        // Rider Error: Local variable 'dict2'  might not be initialized before accessing
-        // Unity Compile Error: CS0165: Use of unassigned local variable 'dict2'
-        // Debug.Log($"dict2: {dict2 == null}");
-        Dictionary<string, int> dict3 = new Dictionary<string, int>();
-        // Rider Warning: Expression is always false
-        Debug.Log($"dict: {dict3 == null}");
+// ----------
+// Dictionary
+// ----------
+Dictionary<string, int> dict = default;
+// Rider Warning: Expression is always true
+Debug.Log($"dict: {dict == null}");
+
+Dictionary<string, int> dict2;
+// Rider Error: Local variable 'dict2'  might not be initialized before accessing
+// Unity Compile Error: CS0165: Use of unassigned local variable 'dict2'
+// Debug.Log($"dict2: {dict2 == null}");
+
+Dictionary<string, int> dict3 = new Dictionary<string, int>();
+// Rider Warning: Expression is always false
+Debug.Log($"dict: {dict3 == null}");
 ```
 
 # 参考コード
