@@ -26,13 +26,13 @@ https://www.youtube.com/watch?v=1wHi9noDBSs&t=1818s
 
 Dice Dreams をやっていて、爆発跡があまりにも気持ち悪かったので自分で実装できないかと思って試した
 
-![](./images/decal/dice-dreams.png)
+<img src="./images/decal/dice-dreams.png" width="300" />
 
 ## 試作品
 
 sample-project を起動して DecalSample.unity を動かしてもらうのが手っ取り早いが、画像で説明すると、以下のように穴の表現に成功した
 
-![](./images/decal/sample01.png)
+<img src="./images/decal/sample01.png" width="300" />
 
 まずは Project Settings の Quality タブで設定しているレンダラー設定ファイルに設定を施す必要がある
 
@@ -49,11 +49,13 @@ hatGPT に穴の画像をモノトーンで生成して！とお願いしてで�
 
 あとは [UnityにあるURP Decal Projector使ってみた](https://qiita.com/unnbabo/items/c02c93421a6c28129f4a) を参考に Herarchy から Create > Rendering > URP Decal Projector をクリックして作成。Width / Height / Projection Depth をいい感じに設定して、 Material に先程の Material を設定すると、 Scene View 上の Decal Projector で表示される直方体との交点にデカールが表示されるのでいい感じに配置すべし！
 
-![](./images/decal/sample02.png)
+<img src="./images/decal/sample02.png" width="300" />
 
 表示されない/うまくいかない場合は、レンダラー設定ファイルの設定忘れかオブジェクトが Decal Projector でないか、シェーダーが ShaderGraphs/Decal になってないとかだと思われる
 
 ちなみに、斜めに表示したい場合は、回転して Decal Projector が2つのオブジェクトの中心あたりを向くようにすると正しく表示される
+
+<img src="./images/decal/sample03.png" width="300" /><img src="./images/decal/sample04.png" width="300" />
 
 他にも設定など色々あるが、今はまだ試していない
 
@@ -62,6 +64,8 @@ hatGPT に穴の画像をモノトーンで生成して！とお願いしてで�
 ## デカール実装の課題
 
 Main Camera (2) は床面に配置したデカールをカメラを反対方法に配置して撮影した様子である
+
+<img src="./images/decal/sample05.png" width="300" />
 
 このようにカメラが動くと破綻することがあるので、カメラを定点あるいは破綻のないことを確認してデカールを配置するか [YouTube 動画](https://www.youtube.com/watch?v=1wHi9noDBSs&t=1818s) の後半を見てもらうとわかるが、プログラムあるいは設定で破綻しないように表現してやると破綻を軽減できる
 

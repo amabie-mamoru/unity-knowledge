@@ -2,13 +2,13 @@
 
 ## C#
 
-[System.Collections.Generic.Dictionary をはじめとする初期値の話](./csharp/default.md)
+* [System.Collections.Generic.Dictionary をはじめとする初期値の話](./csharp/default.md)
 
 ## shader
 
-[シェーダー入門](./shader/tutorial.md)
+* [シェーダー入門](./shader/tutorial.md)
 
 ## unity
 
-[Playable](./unity/playable.md)
-[Decal](./unity/decal.md)
+*** [Playable](./unity/playable.md)
+* [Decal](./unity/decal.md)
