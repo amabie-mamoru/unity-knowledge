@@ -2,6 +2,17 @@
 
 仕組みはなんとなくわかってるのでどちらかというと、コードリーディングのために記述する
 
+## 概要
+
+上記の Inject している様子は sample-project から確認されたい
+
+一応一部状況が確認できるようにリンクを残しておく
+
+![](./images/vcontainer/hierarchy.png)
+
+* [VContainerSample](./sample-project/Assets/Scripts/VContainerSample/VContainerSample.cs)
+* [VContainerBinding](sample-project/Assets/Scripts/VContainerSample/VContainerBinding.cs)
+
 ## VContainer.Unity.LifetimeScope (358行)
 
 ### 最初に実行される理由
@@ -256,14 +267,3 @@ var myClass = container.Resolve<MyClass>();
 ちなみに、 buiklder.Build() の処理は LifetimeScope.cs の Awake() で実行しているので、 Configure の後実行されると考えてもらって問題ない
 
 [Inject] 属性をつけなくても自動で注入してくれたり、 Resolve しなくても自動で解決してくれるのも VContainer の役目だが、具体的にしっくりきていないのでここは実装して確認することにする
-
-## sample-project
-
-上記の Inject している様子は sample-project から確認されたい
-
-一応一部状況が確認できるようにリンクを残しておく
-
-<img src="./images/vcontainer/hierarchy.png" width="300" />
-
-[VContainerSample](unity/sample-project/Assets/Scripts/VContainerSample/VContainerSample.cs)
-[VContainerBinding](unity/sample-project/Assets/Scripts/VContainerSample/VContainerBinding.cs)
