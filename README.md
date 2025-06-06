@@ -16,6 +16,7 @@
 * [Decal](./unity/decal.md)
 * [VContainer](./unity/vcontainer.md)
 * [Camera](./unity/camera.md)
+* [URP の設定](./unity/urp.md)
 
 ## Design Pattern
 
